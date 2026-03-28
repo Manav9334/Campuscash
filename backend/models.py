@@ -29,7 +29,7 @@ class Transaction(Base):
     user_id     = Column(Integer, ForeignKey("users.id"), nullable=False)
     category_id = Column(Integer, ForeignKey("categories.id"))
     amount      = Column(Float, nullable=False)
-    type        = Column(Enum("income", "expense"), nullable=False)
+    type = Column(String(10), nullable=False)
     description = Column(String(255))
     date        = Column(Date, nullable=False)
     created_at  = Column(TIMESTAMP, server_default=func.now())
