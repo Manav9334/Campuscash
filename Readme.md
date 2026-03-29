@@ -2,6 +2,10 @@
 
 CampusCash is a student-friendly personal finance web application built to help users track expenses, manage budgets, split bills, monitor spending habits, and get AI-powered financial insights.
 
+## website link
+
+https://campuscash-zeta.vercel.app/
+
 ## Features
 
 - User authentication and protected routes
