@@ -93,7 +93,7 @@ export default function Transactions() {
   return (
     <div style={{ minHeight: '100vh', background: bg, color: text }}>
       <Navbar />
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '24px' }}>
+      <div style={{ maxWidth: '720px', margin: '0 auto', padding: 'clamp(16px, 4vw, 24px)' }}>
 
         <h2 style={{ fontSize: '22px', fontWeight: 700, margin: '0 0 20px', color: text }}>Transactions</h2>
 

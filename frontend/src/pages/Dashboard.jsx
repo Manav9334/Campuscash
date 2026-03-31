@@ -182,6 +182,11 @@ export default function Dashboard() {
 
         {/* KPI Cards */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:'12px', marginBottom:'20px' }}>
+
+          <div className="grid-4" style={{
+  display: 'grid', gridTemplateColumns: 'repeat(4,1fr)',
+  gap: '12px', marginBottom: '20px'
+}}></div>
           {[
             { label:'Monthly allowance', value:`₹${(user?.monthly_allowance||0).toLocaleString()}`,                                              color:'#3B82F6' },
             { label:'Spent this month',  value:`₹${(summary?.total_expense||0).toLocaleString()}`,                                               color:'#EF4444' },
@@ -234,6 +239,10 @@ export default function Dashboard() {
 
         {/* Streak + Roast row */}
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'16px', marginBottom:'20px' }}>
+          <div className="grid-2" style={{
+  display: 'grid', gridTemplateColumns: '1fr 1fr',
+  gap: '16px', marginBottom: '20px'
+}}></div>
 
           {/* Streak */}
           <div style={{ background:card, borderRadius:'12px', padding:'20px', border:`1px solid ${border}` }}>
@@ -339,11 +348,13 @@ export default function Dashboard() {
         {/* Charts */}
         {loading ? (
           <div style={{ textAlign:'center', color:sub, padding:'60px' }}>Loading your data...</div>
+          
         ) : pieData.length === 0 ? (
           <div style={{
             textAlign:'center', background:card, borderRadius:'12px',
             padding:'60px', border:`1px solid ${border}`
           }}>
+            
             <p style={{ color:sub, fontSize:'16px', margin:'0 0 8px' }}>No transactions yet this month</p>
             <p style={{ color: darkMode?'#4B5563':'#D1D5DB', fontSize:'13px', margin:0 }}>
               Add your first expense to see insights
@@ -443,7 +454,12 @@ export default function Dashboard() {
       </div>
 
       {/* Floating AI Chat */}
-      <div style={{ position:'fixed', bottom:'24px', right:'24px', zIndex:1000 }}>
+      <div style={{
+  position: 'fixed',
+  bottom: 'env(safe-area-inset-bottom, 24px)',
+  right: '16px',
+  zIndex: 1000
+}}>
         {chatOpen && (
           <div style={{
             position:'absolute', bottom:'70px', right:'0', width:'340px',
